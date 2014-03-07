@@ -1,0 +1,18 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "homepage": "https://github.com/richmedia-jp/k-furusawa",
+  "authors": [
+    "moschan <kaityo02@gmail.com>"
+  ],
+  "description": "リッチの内定者課題",
+  "main": "index.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
