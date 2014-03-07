@@ -2,13 +2,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `rich_issue` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `rich_issue` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`salon`
+-- Table `rich_issue`.`salon`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`salon` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`salon` (
   `salon_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NOT NULL,
   `prefecture_code` TINYINT NULL,
@@ -29,9 +29,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`beautician`
+-- Table `rich_issue`.`beautician`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`beautician` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`beautician` (
   `beautician_id` INT NOT NULL AUTO_INCREMENT,
   `salon_id` INT NOT NULL,
   `first_name` VARCHAR(10) NULL,
@@ -48,16 +48,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`beautician` (
   INDEX `fk_beautician_salon1_idx` (`salon_id` ASC),
   CONSTRAINT `fk_beautician_salon1`
     FOREIGN KEY (`salon_id`)
-    REFERENCES `mydb`.`salon` (`salon_id`)
+    REFERENCES `rich_issue`.`salon` (`salon_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`tag_name`
+-- Table `rich_issue`.`tag_name`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`tag_name` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`tag_name` (
   `tag_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`tag_id`),
@@ -66,9 +66,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`good_cut`
+-- Table `rich_issue`.`good_cut`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`good_cut` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`good_cut` (
   `good_cut_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`good_cut_id`),
@@ -77,9 +77,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`salon_ranking`
+-- Table `rich_issue`.`salon_ranking`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`salon_ranking` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`salon_ranking` (
   `salon_id` INT NOT NULL,
   `page_view` INT NOT NULL,
   PRIMARY KEY (`salon_id`),
@@ -87,16 +87,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`salon_ranking` (
   UNIQUE INDEX `salon_id_UNIQUE` (`salon_id` ASC),
   CONSTRAINT `fk_ranking_salon1`
     FOREIGN KEY (`salon_id`)
-    REFERENCES `mydb`.`salon` (`salon_id`)
+    REFERENCES `rich_issue`.`salon` (`salon_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`beautician_ranking`
+-- Table `rich_issue`.`beautician_ranking`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`beautician_ranking` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`beautician_ranking` (
   `beautician_id` INT NOT NULL,
   `page_view` INT NOT NULL,
   PRIMARY KEY (`beautician_id`),
@@ -104,16 +104,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`beautician_ranking` (
   UNIQUE INDEX `beautician_id_UNIQUE` (`beautician_id` ASC),
   CONSTRAINT `fk_beautician_ranking_beautician1`
     FOREIGN KEY (`beautician_id`)
-    REFERENCES `mydb`.`beautician` (`beautician_id`)
+    REFERENCES `rich_issue`.`beautician` (`beautician_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`salon_tag_relations`
+-- Table `rich_issue`.`salon_tag_relations`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`salon_tag_relations` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`salon_tag_relations` (
   `salon_tag_relations_id` INT NOT NULL AUTO_INCREMENT,
   `salon_id` INT NOT NULL,
   `tag_id` INT NOT NULL,
@@ -121,21 +121,21 @@ CREATE TABLE IF NOT EXISTS `mydb`.`salon_tag_relations` (
   INDEX `fk_tags_tag_name1_idx` (`tag_id` ASC),
   CONSTRAINT `fk_tags_salon1`
     FOREIGN KEY (`salon_id`)
-    REFERENCES `mydb`.`salon` (`salon_id`)
+    REFERENCES `rich_issue`.`salon` (`salon_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_tags_tag_name1`
     FOREIGN KEY (`tag_id`)
-    REFERENCES `mydb`.`tag_name` (`tag_id`)
+    REFERENCES `rich_issue`.`tag_name` (`tag_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`beautician_cut_relations`
+-- Table `rich_issue`.`beautician_cut_relations`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`beautician_cut_relations` (
+CREATE TABLE IF NOT EXISTS `rich_issue`.`beautician_cut_relations` (
   `beautician_good_cut_relations_id` INT NOT NULL AUTO_INCREMENT,
   `beautician_id` INT NOT NULL,
   `good_cut_id` INT NOT NULL,
@@ -143,12 +143,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`beautician_cut_relations` (
   INDEX `fk_cuts_cut_name1_idx` (`good_cut_id` ASC),
   CONSTRAINT `fk_cuts_beautician1`
     FOREIGN KEY (`beautician_id`)
-    REFERENCES `mydb`.`beautician` (`beautician_id`)
+    REFERENCES `rich_issue`.`beautician` (`beautician_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_cuts_cut_name1`
     FOREIGN KEY (`good_cut_id`)
-    REFERENCES `mydb`.`good_cut` (`good_cut_id`)
+    REFERENCES `rich_issue`.`good_cut` (`good_cut_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
