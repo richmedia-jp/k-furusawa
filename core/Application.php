@@ -1,12 +1,17 @@
 <?php
 
 /*==========================
-    アプリケーション
-        - 全体の管理
+
+    アプリケーションクラス
+        - 全体の管理をする
+
 ==========================*/
 
+
+// abstractとして定義されたクラスのインスタンスを生成することはできない
 abstract class Application
 {
+    // デバッグモードの管理
     // protected $debug = false;
     protected $request;
     protected $response;
@@ -42,10 +47,13 @@ abstract class Application
 
     protected function initialize()
     {
+        // それぞれのクラスをオブジェクト化
         $this->request    = new Request();
         $this->response   = new Response();
         $this->router     = new Router($this->registerRoutes());
     }
+
+
 
     // 設定関連
     protected function configure()
@@ -101,36 +109,33 @@ abstract class Application
         return $this->getRootDir() . '/web';
     }
 
-
-
-
     /*==========================
         アプリケーションの実行
     ==========================*/
     public function run() {
         try {
 
+            // 受け取ったリクエストを解析
             $params = $this->router->resolve($this->request->getPathInfo());
 
             if ($params === false) {
                 throw new HttpNotFoundException('No route found for ' . $this->request->getPathInfo());
             }
 
-            // コントローラー名
             $controller = $params['controller'];
-            // アクション名
             $action = $params['action'];
 
             // 受け取ったものによって実行する
             $this->runAction($controller, $action, $params);
 
-
         } catch (HttpNotFoundException $e) {
+            // エラーならば404に飛ばす
             $this->render404Page($e);
-        } catch (UnauthorizedActionException $e) {
-            list($controller, $action) = $this->login_action;
-            $this->runAction($controller, $action);
         }
+        // catch (UnauthorizedActionException $e) {
+        //     //list($controller, $action) = $this->login_action;
+        //     $this->runAction($controller, $action);
+        // }
 
         $this->response->send();
     }
@@ -139,19 +144,23 @@ abstract class Application
     // アクションの実行
     public function runAction($controller_name, $action, $params = array())
     {
+        // クラス名を作成
         $controller_class = ucfirst($controller_name) . 'Controller';
-        //echo $controller_class;
+        // クラス名からコントローラを探す
         $controller = $this->findController($controller_class);
 
+        // コントローラがなければエラーで404
         if ($controller === false) {
-            //echo "runAction";
             throw new HttpNotFoundException($controller_class . ' controller is not found.');
         }
 
+        // 見つかれば、コントローラに処理を任せる
         $content = $controller->run($action, $params);
 
+        // コントローラの処理をレスポンスとして返す
         $this->response->setContent($content);
     }
+
 
     // 指定されたコントローラ名から対応するControllerオブジェクトを取得
     protected function findController($controller_class)
