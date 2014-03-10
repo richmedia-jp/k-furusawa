@@ -1,0 +1,1 @@
+<p>beauticianのindexです</p>

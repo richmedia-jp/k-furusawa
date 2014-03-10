@@ -14,7 +14,6 @@ class HairSalonApplication extends Application
         return dirname(__FILE__);
     }
 
-
     // ルーティング定義配列
     protected function registerRoutes()
     {
@@ -32,7 +31,7 @@ class HairSalonApplication extends Application
             '/beautician/:beautician_id'
                 => array('controller' => 'beautician', 'action' => 'detail'),
             '/beautician/search/:query'
-                => array('controller' => 'beautician', 'action' => 'detail'),
+                => array('controller' => 'beautician', 'action' => 'search'),
         );
     }
 

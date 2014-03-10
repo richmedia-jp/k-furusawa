@@ -20,15 +20,17 @@ class ClassLoader {
     }
 
     public function registerDir($dir) {
-        //ディレクトリの登録
-        $this->dirs[] = $dirs;
+        // ディレクトリの登録をする
+        // 引数にきたパスを参照する$dirsに追加する
+        $this->dirs[] = $dir;
     }
 
     // クラスファイルの読み込み
     public function loadClass($class) {
+        // $class は読み込みたいクラス名が入ってくる
         foreach ($this->dirs as $dir) {
             $file = $dir . '/' . $class . '.php';
-            if (is_readdable($file)) {
+            if (is_readable($file)) {
                 require $file;
                 return;
             }

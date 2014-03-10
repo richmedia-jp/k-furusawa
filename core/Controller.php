@@ -33,9 +33,9 @@ abstract class Controller
             $this->forward404();
         }
 
-        if ($this->needsAuthentication($action) && !$this->session->isAuthenticated()) {
-            throw new UnauthorizedActionException();
-        }
+        // if ($this->needsAuthentication($action) && !$this->session->isAuthenticated()) {
+        //     throw new UnauthorizedActionException();
+        // }
 
         $content = $this->$action_method($params);
 
@@ -70,12 +70,13 @@ abstract class Controller
             . $this->controller_name . '/' . $this->action_name);
     }
 
-    // 指定されたURLへリダイレクト
+    // 指定されたURLへリダイレクトを行う
     protected function redirect($url)
     {
         if (!preg_match('#https?://#', $url)) {
             $protocol = $this->request->isSsl() ? 'https://' : 'http://';
             $host = $this->request->getHost();
+            // 元のディレクトリへのパス
             $base_url = $this->request->getBaseUrl();
 
             $url = $protocol . $host . $base_url . $url;
