@@ -4,12 +4,14 @@
     <title><?php echo $my_name."画面です"?></title>
     <meta charset="UTF-8">
     <?php include "../settings/common_css.php" ?>
-< /head>
+</head>
 <body>
     <header>
-        <a href="#" class="button">トップ</a>
-        <a href="#" class="button">美容室から探す</a>
-        <a href="#" class="button">美容師から探す</a>
+        <nav>
+          <a href="#" class="button">トップ</a>
+          <a href="#" class="button">美容室から探す</a>
+          <a href="#" class="button">美容師から探す</a>
+        </nav>
     </header>
     <h1>Cutpia</h1>
     <p><img src="../img/shop.png">人気美容室ランキング</p>
