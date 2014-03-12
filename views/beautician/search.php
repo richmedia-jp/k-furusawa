@@ -49,7 +49,7 @@
       </div>
 
       <div class="beautician-caption">
-        <h3><a href="#"><i class="fa fa-male"></i>ニックネーム</a></h3>
+        <h3><i class="fa fa-male"></i>ニックネーム</h3>
         <label>本名/ほんみょう</label>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
