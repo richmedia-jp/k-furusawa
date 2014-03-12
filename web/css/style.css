@@ -5366,7 +5366,7 @@ kbd {
   overflow: hidden;
   width: 100%;
   position: relative;
-  background: #bdc3c7;
+  background: #d5b4d2;
 }
 /* line 132, ../bower_components/foundation/scss/foundation/components/_orbit.scss */
 .orbit-container .orbit-slides-container {
@@ -9404,12 +9404,17 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
+/* line 12, ../sass/style.scss */
+html, body {
+  background: #f0d5ed;
+}
+
 /*==========================
 
 	ヘッダー
 
 ==========================*/
-/* line 16, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 .header__nav {
   border-style: solid;
   border-width: 0px;
@@ -9441,7 +9446,123 @@ th.hide-for-touch {
   color: white;
 }
 
-/* line 20, ../sass/style.scss */
+/*==========================
+
+	スライダー
+
+==========================*/
+/* line 33, ../sass/style.scss */
+.ranking a {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5625rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+.ranking a:hover, .ranking a:focus {
+  background-color: #007095;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+.ranking a:hover, .ranking a:focus {
+  color: white;
+}
+/* line 36, ../sass/style.scss */
+.ranking .ranking__items {
+  display: block;
+  padding: 0;
+  margin: 0;
+  *zoom: 1;
+}
+/* line 145, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.ranking .ranking__items:before, .ranking .ranking__items:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.ranking .ranking__items:after {
+  clear: both;
+}
+/* line 49, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
+.ranking .ranking__items > li {
+  display: block;
+  height: auto;
+  float: left;
+  padding: 0 0.9375rem 1.875rem;
+}
+
+/*==========================
+
+	Salon
+
+==========================*/
+/*==========================
+	salon - Root画面
+==========================*/
+/*==========================
+	salon - 検索結果画面
+==========================*/
+/* line 59, ../sass/style.scss */
+.search-result {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+/* line 145, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.search-result:before, .search-result:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.search-result:after {
+  clear: both;
+}
+/* line 61, ../sass/style.scss */
+.search-result .salon-img {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 25%;
+  float: left;
+}
+/* line 64, ../sass/style.scss */
+.search-result .salon-caption {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 75%;
+  float: left;
+}
+/* line 67, ../sass/style.scss */
+.search-result ul {
+  margin: 0;
+}
+/* line 69, ../sass/style.scss */
+.search-result ul li {
+  display: inline-block;
+}
+
+/*==========================
+	salon - 詳細画面
+==========================*/
+/* line 82, ../sass/style.scss */
 .tags label {
   display: inline-block;
   margin-right: 30px;
@@ -9450,7 +9571,7 @@ th.hide-for-touch {
   line-height: 30px;
   background: linear-gradient(transparent 8%, rgba(0, 0, 0, 0.1) 8%, rgba(0, 0, 0, 0.1) 14%, transparent 14%, transparent 86%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.1) 92%, transparent 92%), linear-gradient(#ede5cc, #ede5cc);
 }
-/* line 32, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .tags label:after {
   content: '';
   position: absolute;
@@ -9459,5 +9580,5 @@ th.hide-for-touch {
   z-index: -1;
   margin-left: -5px;
   border: 15px solid rgba(0, 0, 0, 0);
-  border-right: 10px solid #bdc3c7;
+  border-right: 10px solid #d5b4d2;
 }

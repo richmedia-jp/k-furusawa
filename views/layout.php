@@ -16,7 +16,7 @@
     <title><?php echo "タイトルです！"?></title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
           <a href="<?php echo $base_url; ?>/" class="header__nav">トップ</a>
           <a href="<?php echo $base_url; ?>/salon" class="header__nav">美容室から探す</a>

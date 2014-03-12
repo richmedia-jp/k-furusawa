@@ -1,11 +1,17 @@
 
-$orbit-bg : #bdc3c7;
+$orbit-bg : #d5b4d2;
 $orbit-container-bg: $orbit-bg;
 
 //@import "../bower_components/foundation/scss/normalize.scss";
 
 // CSSファイルからの相対パスでなければいけない
 @import "../bower_components/foundation/scss/foundation.scss";
+
+
+
+html, body {
+	background: #f0d5ed;
+}
 
 /*==========================
 
@@ -16,6 +22,62 @@ $button-med: rem-calc(8);
 .header__nav {
 	@include button;
 }
+
+
+/*==========================
+
+	スライダー
+
+==========================*/
+.ranking {
+	a{
+		@include button;
+	}
+	.ranking__items {
+		@include block-grid();
+	}
+}
+
+
+/*==========================
+
+	Salon
+
+==========================*/
+
+/*==========================
+	salon - Root画面
+==========================*/
+
+
+/*==========================
+	salon - 検索結果画面
+==========================*/
+// .search-result {
+// 	@include block-grid(2);
+// }
+.search-result {
+	@include grid-row();
+	.salon-img {
+		@include grid-column(3);
+	}
+	.salon-caption {
+		@include grid-column(9);
+	}
+	ul {
+		margin: 0;
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+/*==========================
+	salon - 詳細画面
+==========================*/
+
+
+
 
 .tags label {
 	$dot-border : 3px dashed #000;

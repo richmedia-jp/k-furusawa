@@ -1,56 +1,87 @@
-<h1>Cutpia</h1>
-<p><img src="<?php echo $base_url; ?>/img/shop.png">人気美容室ランキング</p>
+<div>
+  <h1>
+    <i class="fa fa-search"></i>
+    キーワード: うんてゃら
+  </h1>
 
-<p><i class="fa fa-user"></i> 人気美容師ランキング</p>
 
-<ul class="" data-orbit >
-    <li data-orbit-slide="headline-1">
-      <div>
-        <h2>美容師１です</h2>
-        <img src="<?php echo $base_url; ?>/img/shop.png">
-        <a href="#" class="button">トップ</a>
+  <div class="search-results">
+
+  <div class="search-result">
+
+      <div class="salon-img">
+        <img src="http://placehold.it/200x200/A92B48/fff?text=salon_image">
       </div>
-    </li>
-    <li data-orbit-slide="headline-2">
-      <div>
-        <h2>Headline 2</h2>
-        <h3>Subheadline</h3>
-      </div>
-    </li>
-    <li data-orbit-slide="headline-3">
-      <div>
-        <h2>Headline 3</h2>
-        <h3>Subheadline</h3>
-      </div>
-    </li>
-</ul>
 
-<!-- Navigation Arrows -->
-  <a href="#" class="orbit-prev">Prev <span></span></a>
-  <a href="#" class="orbit-next">Next <span></span></a>
+      <div class="salon-caption">
+        <h3>美容室名</h3>
+        <label><i class="fa fa-phone-square"></i> 0000-00-0000</label>
+        <ul>
+          <li><a href="#">タグ1</a></li>
+          <li><a href="#">タグ2</a></li>
+          <li><a href="#">タグ3</a></li>
+        </ul>
+        <h3>店舗紹介タイトル</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
 
-  <!-- Slide Numbers -->
-  <div class="orbit-slide-number">
-    <span>1</span> of <span>3</span>
   </div>
 
-<p><i class="fa fa-tag"></i> タグから探す</p>
-<ul class="" data-orbit>
-    <li data-orbit-slide="headline-1">
-      <div>
-        <h2>タグから探します</h2>
-        <label>テストタグ</label>
-        <label>テストタグ</label>
+    <div class="search-result">
+
+      <div class="salon-img">
+        <img src="http://placehold.it/200x200/A92B48/fff?text=salon_image">
       </div>
-    </li>
-    <li data-orbit-slide="headline-2">
-      <div>
+
+      <div class="salon-caption">
+        <h3>美容室名</h3>
+        <label><i class="fa fa-phone-square"></i> 0000-00-0000</label>
+        <ul>
+          <li><a href="#">タグ1</a></li>
+          <li><a href="#">タグ2</a></li>
+          <li><a href="#">タグ3</a></li>
+        </ul>
+        <h3>店舗紹介タイトル</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-    </li>
-    <li data-orbit-slide="headline-3">
-      <div>
-        <h2>Headline 3</h2>
-        <h3>Subheadline</h3>
+
+  </div>
+
+    <div class="search-result">
+
+      <div class="salon-img">
+        <img src="http://placehold.it/200x200/A92B48/fff?text=salon_image">
       </div>
-    </li>
-</ul>
+
+      <div class="salon-caption">
+        <h3>美容室名</h3>
+        <label><i class="fa fa-phone-square"></i> 0000-00-0000</label>
+        <ul>
+          <li><a href="#">タグ1</a></li>
+          <li><a href="#">タグ2</a></li>
+          <li><a href="#">タグ3</a></li>
+        </ul>
+        <h3>店舗紹介タイトル</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+  </div>
+
+  </div>
+</div>
+

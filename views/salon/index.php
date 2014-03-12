@@ -1,7 +1,16 @@
-<h1>Cutpia</h1>
-<p><img src="<?php echo $base_url; ?>/img/shop.png">人気美容室ランキング</p>
 
-<p><i class="fa fa-user"></i> 人気美容師ランキング</p>
+<h1>美容室名から探す</h1>
+<form >
+   <div class="row collapse">
+      <div class="small-10 columns">
+        <input type="text" placeholder="美容室名を入力してください">
+      </div>
+      <div class="small-2 columns">
+        <a href="#" class="button postfix"><i class="fa fa-search"></i></a>
+      </div>
+  </div>
+</form>
+<p><i class="fa fa-user"></i> おすすめの美容室</p>
 
 <ul class="" data-orbit>
     <li data-orbit-slide="headline-1">
