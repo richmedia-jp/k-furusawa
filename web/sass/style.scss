@@ -53,9 +53,6 @@ $button-med: rem-calc(8);
 /*==========================
 	salon - 検索結果画面
 ==========================*/
-// .search-result {
-// 	@include block-grid(2);
-// }
 .search-result {
 	@include grid-row();
 	.salon-img {
@@ -76,6 +73,38 @@ $button-med: rem-calc(8);
 	salon - 詳細画面
 ==========================*/
 
+.salon-content {
+	@include grid-row();
+
+	.salon-img > img {
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #000;
+	}
+
+	.salon-imgs > img {
+		padding-bottom: 8px;
+		padding-right: 3px;
+	}
+
+	.salon-img {
+		@include grid-column(3);
+	}
+	.salon-caption {
+		@include grid-column(9);
+	}
+
+	.salon-tags {
+		margin: 0;
+		li {
+			display: inline-block;
+		}
+	}
+
+	.salon__beauticians {
+		@include block-grid();
+	}
+}
 
 
 

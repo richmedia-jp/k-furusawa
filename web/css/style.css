@@ -9517,7 +9517,7 @@ html, body {
 /*==========================
 	salon - 検索結果画面
 ==========================*/
-/* line 59, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .search-result {
   width: 100%;
   margin-left: auto;
@@ -9536,25 +9536,25 @@ html, body {
 .search-result:after {
   clear: both;
 }
-/* line 61, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .search-result .salon-img {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 25%;
   float: left;
 }
-/* line 64, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .search-result .salon-caption {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 75%;
   float: left;
 }
-/* line 67, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .search-result ul {
   margin: 0;
 }
-/* line 69, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .search-result ul li {
   display: inline-block;
 }
@@ -9562,7 +9562,83 @@ html, body {
 /*==========================
 	salon - 詳細画面
 ==========================*/
-/* line 82, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
+.salon-content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+/* line 145, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.salon-content:before, .salon-content:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.salon-content:after {
+  clear: both;
+}
+/* line 79, ../sass/style.scss */
+.salon-content .salon-img > img {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+/* line 85, ../sass/style.scss */
+.salon-content .salon-imgs > img {
+  padding-bottom: 8px;
+  padding-right: 3px;
+}
+/* line 90, ../sass/style.scss */
+.salon-content .salon-img {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 25%;
+  float: left;
+}
+/* line 93, ../sass/style.scss */
+.salon-content .salon-caption {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 75%;
+  float: left;
+}
+/* line 97, ../sass/style.scss */
+.salon-content .salon-tags {
+  margin: 0;
+}
+/* line 99, ../sass/style.scss */
+.salon-content .salon-tags li {
+  display: inline-block;
+}
+/* line 104, ../sass/style.scss */
+.salon-content .salon__beauticians {
+  display: block;
+  padding: 0;
+  margin: 0;
+  *zoom: 1;
+}
+/* line 145, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.salon-content .salon__beauticians:before, .salon-content .salon__beauticians:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.salon-content .salon__beauticians:after {
+  clear: both;
+}
+/* line 49, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
+.salon-content .salon__beauticians > li {
+  display: block;
+  height: auto;
+  float: left;
+  padding: 0 0.9375rem 1.875rem;
+}
+
+/* line 111, ../sass/style.scss */
 .tags label {
   display: inline-block;
   margin-right: 30px;
@@ -9571,7 +9647,7 @@ html, body {
   line-height: 30px;
   background: linear-gradient(transparent 8%, rgba(0, 0, 0, 0.1) 8%, rgba(0, 0, 0, 0.1) 14%, transparent 14%, transparent 86%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.1) 92%, transparent 92%), linear-gradient(#ede5cc, #ede5cc);
 }
-/* line 94, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .tags label:after {
   content: '';
   position: absolute;
