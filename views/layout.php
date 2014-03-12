@@ -9,8 +9,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/font-awesome.css">
-    <link rel="stylesheet" href="/bower_components/foundation/css/foundation.min.css">
-    <link rel="stylesheet" href="/bower_components/foundation/css/normalize.css">
+    <!-- <link rel="stylesheet" href="/bower_components/foundation/css/foundation.min.css">
+    <link rel="stylesheet" href="/bower_components/foundation/css/normalize.css"> -->
     <link rel="stylesheet" href="/css/style.css">
 
     <title><?php echo "タイトルです！"?></title>
@@ -18,9 +18,9 @@
 <body>
     <header>
         <nav>
-          <a href="<?php echo $base_url; ?>/" class="button">トップ</a>
-          <a href="<?php echo $base_url; ?>/salon" class="button">美容室から探す</a>
-          <a href="<?php echo $base_url; ?>/beautician" class="button">美容師から探す</a>
+          <a href="<?php echo $base_url; ?>/" class="header__nav">トップ</a>
+          <a href="<?php echo $base_url; ?>/salon" class="header__nav">美容室から探す</a>
+          <a href="<?php echo $base_url; ?>/beautician" class="header__nav">美容師から探す</a>
         </nav>
     </header>
     <div class="main">

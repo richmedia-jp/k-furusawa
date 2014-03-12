@@ -3,7 +3,7 @@
 
 <p><i class="fa fa-user"></i> 人気美容師ランキング</p>
 
-<ul class="" data-orbit>
+<ul class="" data-orbit >
     <li data-orbit-slide="headline-1">
       <div>
         <h2>美容師１です</h2>
@@ -24,6 +24,15 @@
       </div>
     </li>
 </ul>
+
+<!-- Navigation Arrows -->
+  <a href="#" class="orbit-prev">Prev <span></span></a>
+  <a href="#" class="orbit-next">Next <span></span></a>
+
+  <!-- Slide Numbers -->
+  <div class="orbit-slide-number">
+    <span>1</span> of <span>3</span>
+  </div>
 
 <p><i class="fa fa-tag"></i> タグから探す</p>
 <ul class="" data-orbit>
