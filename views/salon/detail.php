@@ -4,7 +4,7 @@
 	  <div class="salon-content">
 
 	      <div class="salon-img">
-	        <img src="http://placehold.it/200x200/A92B48/fff?text=salon_image1">
+	        <img src="<?php echo $base_url; ?>/img/{img1}.jpg">
 	        <div class="salon-imgs">
 		        	<img src="http://placehold.it/85x85/A92B48/fff?text=salon_image1">
 		        	<img src="http://placehold.it/85x85/A92B48/fff?text=salon_image2">
@@ -22,13 +22,8 @@
 	      	  </ul>
 
 	      	  <section>
-	      			        	<h3>店舗紹介タイトル</h3>
-	      			        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	      			        	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	      			        	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      			        	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	      			        	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	      			        	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      			        	<h3>{intro_title}</h3>
+	      			        	<p>{intro_body}</p>
 	      	  </section>
 
 	      	  <section>
@@ -51,13 +46,13 @@
 
 	      	  <section>
 	      	  		<label><i class="fa fa-home"></i> 住所</label>
-	      	  		<p>福島県会津若松市</p>
+	      	  		<p>{address1}{address2}</p>
 	      	  		<label><i class="fa fa-clock-o"></i>営業時間</label>
-	      	  		<p>10:00 ~ 19:00</p>
+	      	  		<p>{open_time}</p>
 	      	  		<label><i class="fa fa-frown-o"></i>定休日</label>
-	      	  		<p>第二第四月曜日</p>
+	      	  		<p>{holiday}</p>
 	      	  		<label><i class="fa fa-phone-square"></i> 電話番号</label>
-	      	  		<p>0000-00-0000</p>
+	      	  		<p>{tel}</p>
 	      	  </section>
 
 	      </div>
