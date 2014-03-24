@@ -39,6 +39,14 @@ class View
         // レイアウトを読み込む
         require $_file;
 
+        // レイアウトファイルでなければ、テンプレートエンジンのように振る舞う
+        /*==========================
+            {...}のように囲まれたファイルを展開する
+            例:
+                {name}
+            ->
+                <?php echo $res["name"]?>
+        ==========================*/
         if( $_file != '/Users/mosco/Dev/sandbox/views/layout.php') {
             $html = ob_get_clean();
             echo preg_replace('/{(.+?)}/e', '$res["$1"]', $html);
