@@ -15,7 +15,7 @@
 
 	      <div class="salon-caption">
 
-	      		<ul class="salon-tags">
+	      		<ul class="tags">
 	      	    <li><a href="#">タグ1</a></li>
 	      	    <li><a href="#">タグ2</a></li>
 	      	    <li><a href="#">タグ3</a></li>
