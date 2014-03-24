@@ -27,7 +27,6 @@ class View
     // レンダリング
     public function render($_path, $_variables = array(), $_layout = false)
     {
-        // ビューファイルを探す
         $_file = $this->base_dir . '/' . $_path . '.php';
 
         extract(array_merge($this->defaults, $_variables));
@@ -35,10 +34,6 @@ class View
         ob_start();
         ob_implicit_flush(0);
 
-        // 使いやすい名前に変更
-        $val = $_variables;
-
-        // ビューファイルの呼び出し
         require $_file;
 
         $content = ob_get_clean();
@@ -50,6 +45,7 @@ class View
                 )
             ));
         }
+
         return $content;
     }
 
