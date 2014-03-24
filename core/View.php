@@ -34,7 +34,15 @@ class View
         ob_start();
         ob_implicit_flush(0);
 
+        //var_dump($_variables);
+
+        // レイアウトを読み込む
         require $_file;
+
+        if( $_file != '/Users/mosco/Dev/sandbox/views/layout.php') {
+            $html = ob_get_clean();
+            echo preg_replace('/{(.+?)}/e', '$res["$1"]', $html);
+        }
 
         $content = ob_get_clean();
 
@@ -48,6 +56,7 @@ class View
 
         return $content;
     }
+
 
     // HTMLエスケープ
     public function escape($string)

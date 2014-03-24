@@ -26,7 +26,7 @@ class SalonController extends Controller
 
 
         return $this->render(array(
-            'salon' => $result
+            'res' => $result
         ));
     }
 
