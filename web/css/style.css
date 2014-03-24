@@ -9736,7 +9736,7 @@ html, body {
 .tags label:after {
   content: '';
   position: absolute;
-  background: linear-gradient(transparent 8%, rgba(0, 0, 0, 0.1) 8%, rgba(0, 0, 0, 0.1) 14%, transparent 14%, transparent 86%, rgba(0, 0, 0, 0.1) 86%, rgba(0, 0, 0, 0.1) 92%, transparent 92%), linear-gradient(#ede5cc, #ede5cc);
+  background: #ede5cc;
   height: 0;
   z-index: -1;
   margin-left: -5px;

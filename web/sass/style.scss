@@ -161,11 +161,11 @@ $button-med: rem-calc(8);
 	&:after {
 		content:'';
 		position: absolute;
-	   background: $tag-bg;
-	   height: 0;
-	   z-index: -1;
-	   margin-left: -5px;
-	   border: 15px solid rgba(0, 0, 0, 0);
-	   border-right: 10px solid $orbit-bg;
+		background: #ede5cc;
+		height: 0;
+		z-index: -1;
+		margin-left: -5px;
+		border: 15px solid rgba(0, 0, 0, 0);
+		border-right: 10px solid $orbit-bg;
 	}
 }
