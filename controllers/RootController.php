@@ -12,9 +12,10 @@ class RootController extends Controller
 
     public function indexAction()
     {
+    		$result = $this->db_manager->get('Salon')->fetchAllSalons();
+    		//var_dump($result);
         return $this->render(array(
-            'user'       => $user,
-            'followings' => $followings,
+        		'res' => $result
         ));
     }
 }

@@ -47,15 +47,14 @@ class SalonRepository extends DbRepository
     //     return false;
     // }
 
-    // public function fetchAllFollowingsByUserId($user_id)
-    // {
-    //     $sql = "
-    //         SELECT u.*
-    //             FROM user u
-    //                 LEFT JOIN following f ON f.following_id = u.id
-    //             WHERE f.user_id = :user_id
-    //     ";
+    public function fetchAllSalons()
+    {
+        $sql = "
+            SELECT *
+                FROM salon
+                    ORDER BY page_view  DESC
+        ";
 
-    //     return $this->fetchAll($sql, array(':user_id' => $user_id));
-    // }
+        return $this->fetchAll($sql, array());
+    }
 }

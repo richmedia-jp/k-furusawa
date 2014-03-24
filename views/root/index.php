@@ -4,22 +4,16 @@
 	<li data-orbit-slide="1">
 		<ul class="ranking__items">
 			<h1>1~5位</h1>
-			<li class="ranking__item">
-				<img src="<?php echo $base_url; ?>/img/shop.png">
-				<a href="#" class="button">トップ</a>
-			</li>
-			<li class="ranking__item">
-				<img src="<?php echo $base_url; ?>/img/shop.png">
-				<a href="#" class="button">トップ</a>
-			</li>
-			<li class="ranking__item">
-				<img src="<?php echo $base_url; ?>/img/shop.png">
-				<a href="#" class="button">トップ</a>
-			</li>
-			<li class="ranking__item">
-				<img src="<?php echo $base_url; ?>/img/shop.png">
-				<a href="#" class="button">トップ</a>
-			</li>
+                <?php
+                  for ($i=0; $i < 5; $i++) {
+                    echo <<< EOF
+                          <li class="ranking__item">
+                            <img src='$base_url/img/{$res[$i]["img1"]}.jpg' width='200'>
+                            <a href='/salon/{$res[$i]["salon_id"]} 'class="button">{$res[$i]["name"]}</a>
+                          </li>
+EOF;
+                  }
+                ?>
             </ul>
     </li>
     <li data-orbit-slide="2">
