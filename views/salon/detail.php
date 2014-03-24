@@ -1,6 +1,6 @@
 
 <div class="salon-detail">
-	<h1><img src="<?php echo $base_url; ?>/img/shop.png">美容室名</h1>
+	<h1><img src="<?php echo $base_url; ?>/img/shop.png"><?php echo $salon["name"] ?></h1>
 	  <div class="salon-content">
 
 	      <div class="salon-img">

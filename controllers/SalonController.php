@@ -18,10 +18,15 @@ class SalonController extends Controller
     public function detailAction($param)
     {
         //var_dump($param['salon_id']);
+        //var_dump($this->request);
+        //$salon_id = $this->request->getGet('salon_id');
+
+        //$result = $this->db_manager->get('Salon')->fetchBySalonId(1);
+        $result = $this->db_manager->get('Salon')->fetchBySalonId($param['salon_id']);
+
 
         return $this->render(array(
-            'user'       => $user,
-            'followings' => $followings,
+            'salon' => $result
         ));
     }
 

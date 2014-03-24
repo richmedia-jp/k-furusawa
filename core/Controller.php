@@ -21,6 +21,7 @@ abstract class Controller
         $this->application = $application;
         $this->request     = $application->getRequest();
         $this->response    = $application->getResponse();
+        $this->db_manager  = $application->getDbManager();
     }
 
     // アクションの実行
@@ -49,7 +50,6 @@ abstract class Controller
         $defaults = array(
             'request'  => $this->request,
             'base_url' => $this->request->getBaseUrl(),
-            'session'  => $this->session,
         );
 
         $view = new View($this->application->getViewDir(), $defaults);

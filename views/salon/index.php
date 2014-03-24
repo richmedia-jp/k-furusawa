@@ -1,5 +1,6 @@
 
 <h1>美容室名から探す</h1>
+
 <form >
    <div class="row collapse">
       <div class="small-10 columns">

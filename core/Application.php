@@ -15,6 +15,7 @@ abstract class Application
     // protected $debug = false;
     protected $request;
     protected $response;
+    protected $db_manager;
 
     // コンストラクタ
     public function __construct($debug = false)
@@ -51,6 +52,7 @@ abstract class Application
         $this->request    = new Request();
         $this->response   = new Response();
         $this->router     = new Router($this->registerRoutes());
+        $this->db_manager = new DbManager();
     }
 
 
@@ -83,6 +85,12 @@ abstract class Application
     public function getResponse()
     {
         return $this->response;
+    }
+
+    // dbManagerオブジェクト
+    public function getDbManager()
+    {
+        return $this->db_manager;
     }
 
     // コントローラのディレクトリを取得
