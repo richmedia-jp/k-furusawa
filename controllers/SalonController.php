@@ -34,8 +34,12 @@ class SalonController extends Controller
     {
         //echo "サーチ";
         //var_dump( urldecode($param['query'] ));
+        $result = $this->db_manager->get('Salon')->fetchByQuery(urldecode($param['query']));
+        //var_dump($result[0]['intro_body']);
+
         return $this->render(array(
-            'query' => $param['query']
+            'query' => urldecode($param['query']),
+            'res' => $result
         ));
     }
 }

@@ -30,6 +30,8 @@ abstract class DbRepository
     public function execute($sql, $params = array())
     {
         $stmt = $this->con->prepare($sql);
+
+        //var_dump($params);
         $stmt->execute($params);
 
         return $stmt;
@@ -49,6 +51,8 @@ abstract class DbRepository
     ==========================*/
     public function fetchAll($sql, $params = array())
     {
+        //var_dump($sql);
         return $this->execute($sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+        //return $this->execute(" SELECT * FROM salon WHERE intro_title OR intro_body LIKE '%最高%' ")->fetch(PDO::FETCH_ASSOC);
     }
 }

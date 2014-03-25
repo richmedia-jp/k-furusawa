@@ -57,4 +57,16 @@ class SalonRepository extends DbRepository
 
         return $this->fetchAll($sql, array());
     }
+
+        public function fetchByQuery($query)
+    {
+        $sql = "
+            SELECT *
+                FROM salon
+                    WHERE intro_title OR intro_body
+                        LIKE '%".$query."%'
+        ";
+
+        return $this->fetchAll($sql, array(':query' => $query));
+    }
 }
