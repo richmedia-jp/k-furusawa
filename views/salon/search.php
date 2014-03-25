@@ -8,6 +8,7 @@
   <div class="search-results">
 
     <?php
+    if(count($res) > 0 ){
       for ($i=0; $i < count($res); $i++) {
           echo <<< EOF
 <div class="search-result">
@@ -33,6 +34,10 @@ EOF;
 </div>
 EOF;
       }
+    }
+    else {
+      echo "<h2>「".$query."」に一致する情報は見つかりませんでした。</h2>";
+    }
 ?>
     <!-- <div class="search-result">
 

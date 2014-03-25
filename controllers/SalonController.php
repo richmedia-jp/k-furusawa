@@ -46,7 +46,7 @@ class SalonController extends Controller
             $tag_ids[] = $this->db_manager->get('Tag')->fetchBySalonId($salons[$i]["salon_id"]);
         }
 
-
+        $tags = [];
         for ($i=0; $i < count($salons); $i++) {
             for ($j=0; $j < count($tag_ids[$i]); $j++) {
                 //echo $tag_ids[$i][$j]["tag_id"];
@@ -54,7 +54,6 @@ class SalonController extends Controller
             }
             $tags[$i] = $_tags;
             $_tags = [];
-
         }
         //var_dump($tags);
 
