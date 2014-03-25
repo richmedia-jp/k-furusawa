@@ -18,13 +18,7 @@ EOF;
     </li>
     <li data-orbit-slide="2">
       <div>
-        <h2>Headline 2</h2>
-        <h3>Subheadline</h3>
-      </div>
-    </li>
-    <li data-orbit-slide="3">
-      <div>
-        <h2>Headline 3</h2>
+        <h2>5~10位</h2>
         <h3>Subheadline</h3>
       </div>
     </li>

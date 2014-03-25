@@ -6,9 +6,9 @@
 	      <div class="salon-img">
 	        <img src="<?php echo $base_url; ?>/img/{img1}.jpg">
 	        <div class="salon-imgs">
-		<img src="http://placehold.it/85x85/A92B48/fff?text=salon_image1">
-		<img src="http://placehold.it/85x85/A92B48/fff?text=salon_image2">
-		<img src="http://placehold.it/85x85/A92B48/fff?text=salon_image3">
+		<img src="http://placehold.it/100x100/A92B48/fff?text=salon_image1">
+		<img src="http://placehold.it/100x100/A92B48/fff?text=salon_image2">
+		<img src="http://placehold.it/100x100/A92B48/fff?text=salon_image3">
 	        </div>
 	      </div>
 

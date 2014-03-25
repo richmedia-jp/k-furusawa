@@ -12,7 +12,11 @@ class SalonController extends Controller
 
     public function indexAction()
     {
-        return $this->render();
+        $result = $this->db_manager->get('Salon')->fetchAllSalons();
+        //var_dump($result);
+        return $this->render(array(
+        'res' => $result
+        ));
     }
 
     public function detailAction($param)
