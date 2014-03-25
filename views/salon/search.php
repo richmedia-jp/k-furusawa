@@ -1,7 +1,7 @@
 <div>
   <h1>
     <i class="fa fa-search"></i>
-    キーワード: うんてゃら
+    キーワード: <?php echo $query?>
   </h1>
 
 
@@ -10,11 +10,11 @@
   <div class="search-result">
 
       <div class="salon-img">
-        <img src="http://placehold.it/200x200/A92B48/fff?text=salon_image">
+        <a href=""><img src="http://placehold.it/200x200/A92B48/fff?text=salon_image"></a>
       </div>
 
       <div class="salon-caption">
-        <h3>美容室名</h3>
+        <h3><a href="<?php echo $base_url?>/salon/1">美容室名</a></h3>
         <label><i class="fa fa-phone-square"></i> 0000-00-0000</label>
         <ul>
           <li><a href="#">タグ1</a></li>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="salon-caption">
-        <h3>美容室名</h3>
+        <h3><a href="<?php echo $base_url?>/salon/1">美容室名</a></h3>
         <label><i class="fa fa-phone-square"></i> 0000-00-0000</label>
         <ul>
           <li><a href="#">タグ1</a></li>

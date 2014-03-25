@@ -35,8 +35,7 @@ class SalonController extends Controller
         //echo "サーチ";
         //var_dump( urldecode($param['query'] ));
         return $this->render(array(
-            'user'       => $user,
-            'followings' => $followings,
+            'query' => $param['query']
         ));
     }
 }

@@ -55,6 +55,7 @@ $button-med: rem-calc(8);
 ==========================*/
 .search-result {
 	@include grid-row();
+	margin-bottom: 30px;
 	.salon-img {
 		@include grid-column(3);
 	}

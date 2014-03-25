@@ -1,13 +1,13 @@
 
 <h1>美容室名から探す</h1>
 
-<form >
+<form method='get' action="{$base_url}/salon/search/">
    <div class="row collapse">
       <div class="small-10 columns">
-        <input type="text" placeholder="美容室名を入力してください">
+        <input type="text" name='query' placeholder="美容室名を入力してください">
       </div>
       <div class="small-2 columns">
-        <a href="#" class="button postfix"><i class="fa fa-search"></i></a>
+        <button type="submit" class="button postfix"><i class="fa fa-search"></i></a>
       </div>
   </div>
 </form>
