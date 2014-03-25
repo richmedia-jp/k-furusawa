@@ -11,6 +11,12 @@
 	$(".ranking__items:not(a)").on("click", function(){
 		//return false;
 	});
+
+	$(".salon-form").on("submit", function(){
+		console.log($(".salon-form input").val());
+		location.href = '/salon/search/'+$(".salon-form input").val();
+		return false;
+	});
 })(jQuery);
 
 

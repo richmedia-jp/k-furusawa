@@ -1,7 +1,7 @@
 
 <h1>美容室名から探す</h1>
 
-<form method='get' action="{$base_url}/salon/search/">
+<form class="salon-form" method='get' action="{$base_url}/salon/search/">
    <div class="row collapse">
       <div class="small-10 columns">
         <input type="text" name='query' placeholder="美容室名を入力してください">

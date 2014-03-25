@@ -1,26 +1,31 @@
 <div>
+
   <h1>
     <i class="fa fa-search"></i>
     キーワード: <?php echo $query?>
   </h1>
 
-
   <div class="search-results">
 
     <?php
-
       for ($i=0; $i < count($res); $i++) {
           echo <<< EOF
 <div class="search-result">
   <div class="salon-img">
-    <a href="$base_url/{$res[$i]['img1']}/{$res[$i]['salon_id']}"><img src="$base_url/img/{$res[$i]['img1']}.jpg"></a>
+    <a href="$base_url/salon/{$res[$i]['salon_id']}"><img src="$base_url/img/{$res[$i]['img1']}.jpg"></a>
   </div>
 
   <div class="salon-caption">
     <h3><a href="/salon/{$res[$i]['salon_id']}">{$res[$i]['name']}</a></h3>
     <label><i class="fa fa-phone-square"></i> {$res[$i]['tel']}</label>
-    <ul>
-      <li><a href="#">タグ1</a></li>
+    <ul class="tags">
+EOF;
+    if(count($tags[$i]) > 0){
+      for ($j=0; $j < count($tags[$i]); $j++) {
+        echo '<li><a href="#">'.$tags[$i][$j][0]["name"].'</a></li>';
+      }
+    }
+    echo <<< EOF
     </ul>
     <h3>{$res[$i]['intro_title']}</h3>
     <p></p>
@@ -28,7 +33,6 @@
 </div>
 EOF;
       }
-      echo $res[0]['intro_title'];
 ?>
     <!-- <div class="search-result">
 
@@ -55,4 +59,3 @@ EOF;
 
   </div>
 </div>
-
