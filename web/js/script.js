@@ -17,6 +17,12 @@
 		location.href = '/salon/search/'+$(".salon-form input").val();
 		return false;
 	});
+
+	$(".tags a").on("click", function(){
+		console.log($(this).text());
+		location.href = '/salon/search/'+$(this).text();
+		return false;
+	});
 })(jQuery);
 
 

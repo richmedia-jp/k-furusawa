@@ -9,6 +9,7 @@
       <div class="small-2 columns">
         <button type="submit" class="button postfix"><i class="fa fa-search"></i></a>
       </div>
+      <h4>※「最高」で検索するとヒットします</h4>
   </div>
 </form>
 <p><i class="fa fa-user"></i> おすすめの美容室</p>

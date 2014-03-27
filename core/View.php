@@ -47,10 +47,10 @@ class View
             ->
                 <?php echo $res["name"]?>
         ==========================*/
-        if( $_file != '/Users/mosco/Dev/sandbox/views/layout.php') {
-            $html = ob_get_clean();
-            echo preg_replace('/{(.+?)}/e', '$res["$1"]', $html);
-        }
+        // if( $_file != '/Users/mosco/Dev/sandbox/views/layout.php') {
+        //     $html = ob_get_clean();
+        //     echo preg_replace('/{(.+?)}/e', '$res["$1"]', $html);
+        // }
 
         $content = ob_get_clean();
 
